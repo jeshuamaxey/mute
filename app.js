@@ -1,5 +1,3 @@
-require('newrelic');
-
 var express = require('express');
 var path = require('path');
 var favicon = require('static-favicon');
@@ -50,6 +48,11 @@ if ('development' == app.get('env')) {
   nomo = require('node-monkey').start({
     silent: true
   });
+}
+
+if ('production' == app.get('env')) {
+  //initialise newrelc logging
+  require('newrelic');
 }
 
 /// error handlers

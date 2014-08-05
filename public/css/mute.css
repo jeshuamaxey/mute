@@ -1,15 +1,36 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 
-a {
-  color: #E82C0C;
+  padding: 70px 0px;
 }
 
 .navbar-brand {
-	text-align: center;
-	width: 100%;
 	text-decoration: line-through;
+}
+
+#top-navbar-collapse {
+  padding: 0;
+}
+
+.nav > li {
+  margin: 0px;
+}
+
+.nav > li.navbar-text {
+  padding: 5px 15px;
+}
+
+#top-navbar-collapse .profile-name span {
+  margin-right: 10px;
+}
+
+.profile-pic {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+
+  height: 40px;
+  border-radius: 50%;
 }
 
 /*
@@ -26,4 +47,35 @@ a {
     position: absolute;
     right: 0;
     top: 54%;
+}
+
+/*  */
+
+/* styles for tweets */
+.tw-profile {
+  margin-bottom: 20px;
+
+  padding: 5px;
+}
+
+.tw-profile a {
+  color: #E82C0C;
+}
+
+.tw-username {
+  margin-top: 0;
+}
+
+.tw-username a {
+  margin-right: 10px;
+}
+
+.tw-profile-image {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+
+  float: left;
+  margin-right: 10px;
+  border-radius: 5px;
 }

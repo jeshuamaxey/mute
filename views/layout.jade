@@ -7,9 +7,39 @@ html
 		link(rel='stylesheet', href='css/mute.css')
 
 	body
-		nav(role="navigation").navbar.navbar-default.navbar-inverse
+		nav(role="navigation").navbar.navbar-default.navbar-inverse.navbar-fixed-top
 			.navbar-header
 				a(href="#" ).navbar-brand.brand=title
+				button.navbar-toggle(type="button" data-toggle="collapse" data-target="#top-navbar-collapse")
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+			#top-navbar-collapse.collapse.navbar-collapse.hidden
+				ul.nav.nav-bar.navbar-right
+					li
+						a.visible-xs.filter(role='menuitem', tabindex='-1', href='#') Filter out unmuted (Displaying 
+							span.displaying 0
+							|  of 
+							span.total 0
+							|  [loaded] of a possible 
+							span.following 0
+							|)
+					li.profile-name.navbar-text Logged in as &#64;
+						span
+						img.profile-pic
 
 		.container
 			block content
+
+		nav.navbar.navbar-default.navbar-inverse.navbar-fixed-bottom.hidden-xs(role="navigation")
+			block bottom-nav
+
+		script(type='text/javascript').
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			
+			ga('create', 'UA-53532614-1', 'auto');
+			ga('send', 'pageview');
