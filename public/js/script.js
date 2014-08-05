@@ -21,8 +21,8 @@ app.main = function() {
 		app.filterFriends(filter, app.updateList);
 		//update filter toggle and UI
 		$('#filter').data('is-filtering', filter);
-		var message = (filter ? "Remove filter" : "Filter out unmuted");
-		$('.filter').html(message);
+		var message = (filter ? "Show all " : "Show muted only ");
+		$('.filter .text, button.filter').html(message);
 	});
 };
 
