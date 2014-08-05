@@ -1,0 +1,21 @@
+{
+  "name": "mute",
+  "version": "0.0.0",
+  "authors": [
+    "Jeshua Maxey <me@jeshua.co>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.2.0"
+  }
+}

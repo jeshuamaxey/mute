@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	section.row
+		div.col-md-12
+			div
+				span Filter out unmuted: 
+				input#filter(type='checkbox')
+			div
+				p (Currently displaying 
+					span#displaying 0
+					|  of 
+					span#total 0
+					|)
+				div#loading Loading the people you follow
+				button#getFriends.btn.btn-default.hidden Load more people you follow
+				
+			div#friendList
+
+	script(src="components/jquery/dist/jquery.js")
+	script(src="js/script.js")

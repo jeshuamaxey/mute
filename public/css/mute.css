@@ -1,0 +1,29 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #E82C0C;
+}
+
+.navbar-brand {
+	text-align: center;
+	width: 100%;
+	text-decoration: line-through;
+}
+
+/*
+ * for a thicker line through 
+ * thanks: http://stackoverflow.com/questions/2539207
+ **/
+.strikeout {
+    position: relative;
+}
+.strikeout::after {
+    border-bottom: 3px solid black;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 54%;
+}
