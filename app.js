@@ -1,3 +1,5 @@
+require('newrelic');
+
 var express = require('express');
 var path = require('path');
 var favicon = require('static-favicon');
@@ -10,11 +12,6 @@ var passport = require('passport');
 var routes = require('./routes/index');
 var auth = require('./routes/auth');
 var api = require('./routes/api');
-
-//output to node-monkey console
-var nomo = require('node-monkey').start({
-  silent: true
-});
 
 var app = express();
 
@@ -43,6 +40,17 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+
+/// node-monkey logging (dev only)
+
+var nomo;
+
+if ('development' == app.get('env')) {
+  //output to node-monkey console
+  nomo = require('node-monkey').start({
+    silent: true
+  });
+}
 
 /// error handlers
 
