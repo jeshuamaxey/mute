@@ -1,6 +1,10 @@
 # Mute
 
-Mute does x, y and z.
+Mute is a simple app that shows you all the people on twitter you've muted in one place.
+
+Mute was built by [@jeshuamaxey](http://twitter.com/jeshuamaxey) after [@kadhimshubber](http://twitter.com/kadhimshubber) thought it was a good idea. All the code is available under the MIT License on GitHub
+
+You can try Mute for youself [here](http://mute-list.herokuapp.com).
 
 ## Get Mute running
 
@@ -22,4 +26,4 @@ then
 ````
 npm start
 ````
-to fire it up. It is accessible at 'http://localhost:3000'
+to fire it up. It is accessible at `http://localhost:3000`
